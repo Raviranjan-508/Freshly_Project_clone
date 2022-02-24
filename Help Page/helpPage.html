@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help-Page</title>
+    <style>
+        #main {
+            width: 100%;
+            margin: 0px;
+            padding: 0px;
+            background-color:#fffdf7;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            /* margin: 20px 90px; */
+            /* border: 2px solid red; */
+            padding: 15px 0px;
+            background-color: #fffdf7;
+        }
+
+        .header>div>img {
+            width: 15%;
+        }
+
+        .anchor {
+            display: flex;
+            width: 30%;
+            padding: 10px 0px;
+            justify-content: space-around;
+        }
+
+        .anchor>a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 19px;
+        }
+
+        .background {
+            width: 100%;
+            height: 300px;
+            /* border: 2px solid red; */
+            background-size: cover;
+        }
+
+        .img>img {
+            width: 100%;
+            height: 300px;
+        }
+
+        #search-button {
+            width: 50%;
+            height: 40px;
+            margin: auto;
+            margin-top: -200px;
+            /* border: 2px solid red; */
+        }
+
+        #search-button>input {
+            width: 100%;
+            border-radius: 50px;
+            height: 40px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Question Freshly */
+        .Question-Freshly {
+            width: 100%;
+            /* border: 2px solid red; */
+        }
+
+        .twelve-que {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            /* border: 2px solid yellow; */
+            width: 90%;
+            margin: auto;
+            gap: 20px;
+        }
+
+        .twelve-que-1 {
+            border: 0.1px solid #03514e;
+            border-radius: 5px;
+        }
+        .twelve-que-1:hover{
+            background-color: #03514e;
+            color: white;
+        }
+
+        .twelve-que-1,
+        .one-que>p {
+            text-align: center;
+            font-family: sans-serif;
+            font-size: 18px;
+            /* font-weight: bold; */
+            color: #03514e;
+        }
+        .one-que>p{
+            color: black;
+        }
+
+        .one-que {
+            width: 90%;
+            border: 0.1px solid #03514e;
+            border-radius: 5px;
+            margin: auto;
+            margin-top: 20px;
+        }
+        .one-que:hover{
+            background-color: #03514e;
+            color: red;
+        }
+        /* promoted article */
+       
+        .promoted-article{
+            width: 100%;
+            /* border: 0.1px solid #333333; */
+            margin-top: 50px;
+        }
+        .promoted-article-heading{
+            width: 90%;
+            margin: auto;
+            font-weight:normal;
+            color: #303030;
+        }
+        .promoted-article-grid,.line{
+            display: grid;
+            width: 90%;
+            gap: 20px;
+            margin: auto;
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: repeat(4,1fr);
+
+        }
+        .line{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+            gap: 0px;
+        }
+        .promoted-article-box>a{
+            font-family: sans-serif;
+            font-size: 16px;
+            /* font-weight: bold; */
+            color: #03514e;
+            text-decoration: none;
+        }
+        .freshly-link{
+            text-decoration: none;
+            color: #000;
+        }
+        /* media Queary */
+
+        @media all and (min-width : 381px) and (max-width: 900px)
+        {
+            .header {
+            display: flex;
+            justify-content: space-between;
+            /* margin: 20px 90px; */
+            /* border: 2px solid red; */
+            padding: 5px 20px;
+            background-color: #fffdf7;
+        }
+      
+        .anchor {
+            display: flex;
+            width: 100%;
+            padding: 20px 0px;
+            justify-content: space-around;
+        }
+
+        .anchor>a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 17px;
+        }
+        #search-button {
+            width: 60%;
+        
+        }
+        .twelve-que {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            /* border: 2px solid yellow; */
+            
+        }
+        .promoted-article-grid,.line{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows: repeat(5,1fr);
+
+        }
+       
+        .line{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+           
+        }
+        
+      }
+
+      /* small screen */
+      @media all and (min-width : 50px) and (max-width : 380px)
+            {
+                .header {
+            display: flex;
+            justify-content: space-between;
+            /* margin: 20px 90px; */
+            /* border: 2px solid red; */
+            padding: 5px 10px;
+            background-color: #fffdf7;
+        }
+        .header>div{
+            width: 40%;
+        }
+        .header>div>img {
+            width: 100%;
+        }
+        .anchor {
+            display: flex;
+            width: 100%;
+            padding: 2px 0px;
+            justify-content: start;
+        }
+
+        .anchor>a {
+            text-decoration: none;
+            color: #333333;
+            font-size: 13px;
+        }
+        #search-button {
+            width: 60%;
+        
+        }
+        .twelve-que {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(12, 1fr);
+            /* border: 2px solid yellow; */
+            
+        }
+        .promoted-article-grid,.line{
+            grid-template-columns: repeat(1,1fr);
+            grid-template-rows: repeat(10,1fr);
+
+        }
+       
+        .line{
+            grid-template-columns: repeat(3,1fr);
+            grid-template-rows: auto;
+           
+        } 
+            }
+
+    </style>
+</head>
+
+<body>
+    <div id="main">
+
+        <!-- header or navbar -->
+        <div class="header">
+            <div><img src="./Images/logo.png" alt="" srcset=""></div>
+            <div class="anchor">
+                <a href="">Submit a request</a>
+                <a href="">Sign in</a>
+            </div>
+        </div>
+
+        <!-- background and searchbar -->
+
+        <div class="background">
+            <div class="img">
+                <img src="./Images/background2.jpg" alt="" srcset="">
+            </div>
+            <div id="search-button">
+                <input type="search" name="" placeholder="search">
+            </div>
+        </div>
+
+        <!-- Question about Freshly -->
+
+        <div class="Question-Freshly">
+            <div class="twelve-que">
+                <div class="twelve-que-1">
+                    <p>What is Freshly?</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>How Does Your Service Work?</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Meal Plans & Pricing</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>About the Meals</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Dietary & Nutritional Information</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Packaging & Recycling</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Managing My Subscription</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>All Things App</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Managing an Order</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Payment & Promotions</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Delivery & Shipping</p>
+                </div>
+                <div class="twelve-que-1">
+                    <p>Technical Support</p>
+                </div>
+               
+            </div>
+
+            <div class="one-que">
+                <p>Our Commitment to food Safety</p>
+            </div>
+
+        </div>
+
+        <!-- Promoted Articles related to Freshly -->
+        <div class="promoted-article">
+            <div class="promoted-article-heading">
+                <h2>Promoted articles</h2>
+            </div>
+            <div class="promoted-article-grid">
+                <div class="promoted-article-box">
+                    <a href="">What is Freshly?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">What should I know before I order?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">How much do your meal plans cost?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">How many servings are in a meal?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">How do I heat up my meals?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">Do the meals have a use-by date, and can I freeze my meals?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">Where are your meals cooked?</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">All Things App</a>
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                   <a href="">    am I committing to with a subscription?</a> 
+                    <hr>
+                </div>
+                <div class="promoted-article-box">
+                    <a href="">How do I cancel a subscription?</a>
+                    <hr>
+                </div>
+         
+                <!-- line -->
+            </div>
+            <div class="line">
+                <div>
+                    <hr>
+                </div>
+                <div>
+                    <hr>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
+            <br><br><br><br><br>
+            <hr>
+        </div>
+        
+
+        <a href="" class="freshly-link">Freshly</a>
+
+    </div>
+   
+</body>
+
+</html>
