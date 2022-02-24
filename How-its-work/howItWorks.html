@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How It Works</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            width: 100%;
+        }
+
+        #header {
+            width: 40%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            margin: auto;
+
+            color: #FFFFFF;
+        }
+
+        #header:first-child div,
+        second-child div,
+        last-child div {
+            text-align: center;
+            color: #717171;
+            padding: 12px 0px;
+            /* width: 40%; */
+        }
+
+        .horizontal {
+            width: 99%;
+            border: 0.01px solid black;
+
+        }
+
+        .about {
+            font-size: 48px;
+            font-weight: bolder;
+            padding: 50px 32px;
+            text-align: center;
+            font-family: sans-serif;
+            color: #333333;
+        }
+
+        .video {
+            text-align: center;
+            padding: 40px 32px;
+        }
+
+       
+        #iframe-container{
+            width: 90%;
+            height: 515px;
+        }
+        .video-heading {
+            width: 70%;
+            margin: auto;
+        }
+
+        .video-heading>h1 {
+            font-size: 38px;
+            color: #333333;
+        }
+
+        .video-heading>p {
+            font-size: 17px;
+            color: #333333;
+        }
+
+        /* .video-img {
+            width: 700px;
+            height: 225;
+        } */
+
+        .middle-part-heading {
+            padding: 40px 32px;
+        }
+
+        .middle-part-heading>h1,
+        p {
+            text-align: center;
+        }
+
+        .middle-part-heading>h1 {
+            color: #333333;
+            font-size: 38px;
+            margin: 0px 0px 10px 0px;
+        }
+
+        .columm-div-3 {
+            display: grid;
+            width: 70%;
+            margin: auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            /* border: 2px solid rebeccapurple; */
+            gap: 40px;
+        }
+
+        .columm-div-3>div {
+            /* border: 2px solid red; */
+            padding: 12px ;
+        }
+
+        .columm-div-3-img>img {
+            width: 60%;
+            height: 170px;
+            padding: 40px;
+            align-items: center;
+        }
+
+        .columm-div-3-1>h1,
+        p {
+            text-align: center;
+        }
+
+        .columm-div-3-1>h1 {
+            margin: 0px 0px 8px 0px;
+            color: #333333;
+            font-family: sans-serif;
+            font-size: 24px;
+        }
+
+        .columm-div-3-1>p {
+            margin: 0px 0px 12px 0px;
+            color: #333333;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .learn-more {
+            width: 10%;
+            height: auto;
+            margin: auto;
+            /* border: 2px solid yellow; */
+            background-color: #3167ff;
+        }
+
+        .learn-more>p {
+            color: #caf5ff;
+            padding: 13px 12px 16px 10px;
+            font-size: 18px;
+            font-family: sans-serif;
+        }
+
+        .food-image-1 {
+            margin: auto;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            gap: 50px;
+            /* margin: 25px 180px; */
+
+        }
+
+        .food-image-1-img>img {
+            width: 100%;
+            height: 250px;
+            padding: 20px;
+        }
+
+        .food-image-1-content {
+            /* padding: 32px 0px 32px 32px; */
+            margin: 50px 20px;
+        }
+
+        .food-image-1-content>h1 {
+            text-align: left;
+            font-size: 30px;
+            font-family: sans-serif;
+            color: #333333;
+        }
+
+        .food-image-1-content>p {
+            text-align: left;
+            font-size: 15px;
+            /* font-weight: bold; */
+            font-family: sans-serif;
+            color: #333333;
+            margin: 0px 0px 8px;
+        }
+
+        #anchor {
+            color: #4b77f1;
+            text-decoration: underline;
+            font-size: 16px;
+            font-family: sans-serif;
+            margin-top: 30px;
+        }
+
+        .background-plans-menu {
+            width: 99%;
+            height: 250px;
+            color: #3167ff;
+            border: 2px solid #ffffff;
+            background-image: url(./Images/BACKGROUND.png);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .background-plans-menu>img {
+            width: 100%;
+            height: 250px;
+            background-size: contain;
+        }
+
+        .learn-more-background {
+            margin-top: 100px;
+            width: 20%;
+            margin: 100px auto;
+            color: #3167ff;
+            height: 50px;
+            background-color: #3167ff;
+            border: 2px solid #3167ff;
+        }
+
+        .learn-more-background>p {
+            color: #FFFFFF;
+            margin-top: 15px;
+            font-size: 19px;
+            font-family: sans-serif;
+            /* padding-bottom: 15PX; */
+
+
+        }
+
+        .How-Freshly-Work-heading {
+            text-align: center;
+            width: 70%;
+            margin: auto;
+        }
+
+        .How-Freshly-Work-heading>h1 {
+            font-size: 38px;
+            color: #333333;
+            font-family: sans-serif;
+        }
+
+        .How-Freshly-Work-heading>p {
+            font-size: 17px;
+            color: #333333;
+            font-family: sans-serif;
+        }
+
+        .How-Freshly-Work-Middle {
+            display: grid;
+            width: 70%;
+            margin: auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            /* border: 2px solid rebeccapurple; */
+            gap: 40px;
+        }
+
+        .How-Freshly-Work-Middle>div {
+            /* border: 2px solid rebeccapurple; */
+            margin-top: 30px;
+        }
+
+        .How-Freshly-Work-Middle-1>img {
+            width: 100%;
+            height: 170px;
+            /* padding: 40px; */
+            align-items: center;
+        }
+
+        .How-Freshly-Work-Middle-1>h2 {
+            margin-top: 20px;
+            color: #333333;
+            font-family: sans-serif;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        /* Why we choose Freshly */
+        .why-fershly-choose-heading {
+            padding: 40px 32px;
+        }
+
+        .why-fershly-choose-heading>h1,
+        p {
+            text-align: center;
+        }
+
+        .why-fershly-choose-heading>h1 {
+            color: #333333;
+            font-size: 38px;
+            margin: 0px 0px 10px;
+        }
+
+        .why-freshly-choose-grid {
+            display: grid;
+            width: 70%;
+            margin: auto;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: auto;
+            /* border: 2px solid rebeccapurple; */
+            gap: 50px;
+        }
+
+        .why-freshly-choose-grid>div {
+            /* border: 2px solid red; */
+            padding: 12px;
+        }
+
+        .why-freshly-choose-img>img {
+            width: 90%;
+            height: 170px;
+            padding: 20px;
+            align-items: center;
+        }
+
+        .why-freshly-choose-1>h1,
+        p {
+            text-align: center;
+        }
+
+        .why-freshly-choose-1>h1 {
+            margin: 0px 0px 8px;
+            color: #333333;
+            font-family: sans-serif;
+            font-size: 24px;
+        }
+
+        .why-freshly-choose-1>p {
+            margin: 0px 0px 12px;
+            color: #333333;
+            font-family: sans-serif;
+            font-size: 14px;
+        }
+
+        .bottomPart {
+            background-color: #fffdf7;
+            padding: 30px;
+        }
+
+        .lastpartHeading {
+            text-align: center;
+            color: #333333;
+            font-family: sans-serif;
+            font-size: 18px;
+            padding-top: 20px;
+
+        }
+
+        
+        @media all and (min-width : 381px) and (max-width: 1000px) {
+         
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <div>Food Philosophy</div>
+        <div>How Freshly Works</div>
+        <div>Why Freshly</div>
+    </div>
+    <div class="horizontal"></div>
+    <div class="about">About Freshly</div>
+    <div class="video">
+        <div class="video-heading">
+            <h1>Heat-and-eat in 3 minutes or less</h1>
+            <p>See just how easy it is to prepare a chef-cooked Freshly meal</p>
+        </div>
+     
+            <iframe id="iframe-container" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen src="https://www.youtube.com/embed/kPB7ZgY8RqA"
+                ></iframe>
+
+        
+    </div>
+
+
+    <div id="middle-part">
+        <div class="middle-part-heading">
+            <h1>Our Food Philosophy</h2>
+                <p>Our meals aren’t just ready in minutes... or just delicious... or just nutritious. They’re all three.
+                </p>
+        </div>
+        <div class="columm-div-3">
+            <div class="columm-div-3-1">
+                <div class="columm-div-3-img">
+                    <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5ec28f0020df16335dbda1b6_gp-less-sugar-nocopy%402x.png"
+                        alt="" srcset="">
+                </div>
+                <h1>Less sugar</h1>
+                <p>Sweet, naturally</p>
+            </div>
+            <div class="columm-div-3-1">
+                <div class="columm-div-3-img">
+                    <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5ec28f00f6ed944c5e2f02a3_gp-less-processed-nocopy%402x.png"
+                        alt="" srcset="">
+                </div>
+                <h1>Less processed </h1>
+                <p>Only thoughtful ingredients</p>
+            </div>
+            <div class="columm-div-3-1">
+                <div class="columm-div-3-img">
+                    <img src="https://assets-global.website-files.com/5d03b4e130118314af624b20/5ec28f00a02e38947ec7759a_gp-more-nutrients-nocopy%402x.png"
+                        alt="" srcset="">
+                </div>
+                <h1>More nutrients</h1>
+                <p>Simple swaps and sneaky veggies</p>
+            </div>
+        </div>
+
+        <!-- LEARN MORE -->
+        <div class="learn-more">
+            <p><a href="http://www.google.com"></a>Learn More</p>
+        </div>
+
+        <!-- FOOD IMAGE -->
+        <!-- <div class="food-image"> -->
+        <div class="food-image-1">
+            <div class="food-image-1-img">
+                <img src="./Images/food2.jpg" alt="">
+            </div>
+            <div class="food-image-1-content">
+                <h1>Delicious Gluten-Free Options</h1>
+                <p>Freshly offers a host of gluten-free meals, so you can avoid gluten without skimping on variety or
+                    great taste.</p>
+                <p id="anchor">Learn more</p>
+            </div>
+        </div>
+        <div class="food-image-1">
+            <div class="food-image-1-img">
+                <img src="./Images/IMG5.png" alt="">
+            </div>
+            <div class="food-image-1-content">
+                <h1>Smart Nutritions</h1>
+                <p>Freshly chefs use clever swaps and sneaky veggies to craft meals with unexpected twists—so every bite
+                    is as nutritious as it is delicious.</p>
+                <p id="anchor">Learn more</p>
+            </div>
+        </div>
+        <div class="food-image-1">
+            <div class="food-image-1-img">
+                <img src="./Images/IMG4.png" alt="">
+            </div>
+            <div class="food-image-1-content">
+                <h1>Introducing: Purely Plant</h1>
+                <p>Our Purely Plant lineup offers seriously satisfying meals featuring our new plant-based protein.</p>
+                <p id="anchor">Learn more</p>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- plans and menu in background -->
+
+        <div class="background-plans-menu">
+            <!-- <img src="./Images/BACKGROUND.png" alt=""> -->
+            <div class="learn-more-background">
+                <p><a href="http://www.google.com"></a>See Our Plans & Menu </p>
+            </div>
+        </div>
+
+        <!-- How Freshly Works -->
+        <div class="How-Freshly-Work">
+
+            <!-- Heading of How Freshly Works -->
+            <div class="How-Freshly-Work-heading">
+                <h1>How Freshly Works</h1>
+                <p>We’re always hard at work making the Freshly experience easier for our customers.</p>
+            </div>
+
+            <!-- Middle of How Freshly Works -->
+            <div class="How-Freshly-Work-Middle">
+                <div class="How-Freshly-Work-Middle-1">
+                    <img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/5d7ffdc4d863541cac775fa4_Heat%20your%20meal-p-500.png"
+                        alt="" srcset="">
+                    <h2>How to Heat Freshly Meals</h2>
+                </div>
+                <div class="How-Freshly-Work-Middle-1">
+                    <img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/5d7ffdc4d863541cac775fa4_Heat%20your%20meal-p-500.png"
+                        alt="" srcset="">
+                    <h2>How to Change Your Freshly Meals</h2>
+                </div>
+                <div class="How-Freshly-Work-Middle-1">
+                    <img src="https://assets-global.website-files.com/5d03b4e13011831ae4624b37/5d7ffdc4d863541cac775fa4_Heat%20your%20meal-p-500.png"
+                        alt="" srcset="">
+                    <h2>How to Recycle Freshly Packaging</h2>
+                </div>
+            </div>
+            <!-- LEARN MORE of How Freshly Works-->
+            <div class="learn-more">
+                <p><a href="http://www.google.com"></a>Learn More</p>
+            </div>
+
+            <!-- Bottom of How Freshly Works -->
+            <div class="How-Freshly-Work-Bottom">
+
+            </div>
+            <div class="food-image-1">
+                <div class="food-image-1-img">
+                    <img src="./Images/IMG4.png" alt="">
+                </div>
+                <div class="food-image-1-content">
+                    <h1>The Official Freshly App</h1>
+                    <p>Our app makes it easy to choose your meals, track deliveries, and chat with us 24/7</p>
+                    <p id="anchor">Learn more</p>
+                </div>
+            </div>
+        </div>
+        <div class="food-image-1">
+            <div class="food-image-1-img">
+                <img src="./Images/IMG5.png" alt="">
+            </div>
+            <div class="food-image-1-content">
+                <h1>Manage your dietary preferences</h1>
+                <p>Freshly chefs use clever swaps and sneaky veggies to craft meals with unexpected twists—so every bite
+                    is as nutritious as it is delicious.</p>
+                <p id="anchor">Learn more</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why Choose Freshly -->
+    <div class="why-fershly-choose">
+        <!-- <div id="middle-part"> -->
+        <div class="why-fershly-choose-heading">
+            <h1>Why Freshly is Better Than Meal Kits</h2>
+                <p>Our meals aren’t just ready in minutes... or just delicious... or just nutritious. They’re all three.
+                </p>
+        </div>
+        <div class="why-freshly-choose-grid">
+            <div class="why-freshly-choose-1">
+                <div class="why-freshly-choose-img">
+                    <img src="Images/food2.jpg" alt="" srcset="">
+                </div>
+                <h1>Why Freshly is Better Than Meal Kits</h1>
+            </div>
+            <div class="why-freshly-choose-1">
+                <div class="why-freshly-choose-img">
+                    <img src="Images/BACKGROUND.png" alt="" srcset="">
+                </div>
+                <h1>Why Freshly is Better than Cooking</h1>
+            </div>
+            <div class="why-freshly-choose-1">
+                <div class="why-freshly-choose-img">
+                    <img src="Images/IMG5.png" alt="" srcset="">
+                </div>
+                <h1>Three Reason to Leave Takeout Freshly</h1>
+            </div>
+
+        </div>
+
+        <!-- LEARN MORE of How Freshly Works-->
+        <div class="learn-more">
+            <p><a href="http://www.google.com"></a>Learn More</p>
+        </div>
+
+        <!-- last part we ready -->
+        <div class="bottomPart">
+            <div class="lastpartHeading">
+                <h1>Ready to live Freshly?</h1>
+            </div>
+            <div class="learn-more">
+                <p><a href="http://www.google.com"></a>Get Started</p>
+            </div>
+        </div>
+        <!-- </div> -->
+
+         
+    </div>
+
+
+</body>
+
+</html>
